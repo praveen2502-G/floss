@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>tariff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/tariff.js}"></script>
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        
+        body {
+            margin-bottom: 70px;
+        }
+        
+        .alert {
+            position: absolute;
+            margin-top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .input-group .input-group-text {
+            width: 100%;
+        }
+        
+        @media (max-width: 1100px) {
+            form .input-group-prepend {
+                width: 100%;
+            }
+            form .input-group-append {
+                width: 100%;
+            }
+        }
+        
+        @media (min-width: 1100px) {
+            form .input-group-prepend {
+                min-width: 155px;
+            }
+            form .input-group-append {
+                min-width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-container" style="text-align: center;">
+        <img th:src="@{/images/floss.jpeg}" width="300px">
+    </div>
+    <br>
+    <div class="alert alert-success collapse" role="alert">
+        <span class="fa fa-check-circle"></span> <span class="alertText"></span>
+    </div>
+    <div class="alert alert-danger collapse" role="alert">
+        <span class="fa fa-exclamation-circle"></span> <span class="alertText"></span>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <h1> Modify Parking</h1>
+        <form class="needs-validation" novalidate="novalidate">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Capacity</span>
+                </div>
+                <input type="number"  min="10" id="totalcapacity" class="form-control" required="required" />
+                <div class="input-group-append">
+                    <span class="input-group-text">&#8377; per hour</span>
+                </div>
+                <div class="invalid-feedback">Invalid data</div>
+            </div>
+             <button class="btn btn-dark btn-block " type="submit" id="submit">Submit changes</button>
+        </form>
+    </div>
+    <br>
+    <div class="jumbotron jumbotron-fluid">
+        <h1>Modify tariff</h1>
+        <form class="needs-validation" novalidate="novalidate">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Basic fee</span>
+                </div>
+                <input type="number" step="0.01" min="0.01" id="basicFee" class="form-control" required="required" />
+                <div class="input-group-append">
+                    <span class="input-group-text">&#8377; per hour</span>
+                </div>
+                <div class="invalid-feedback">Invalid data</div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Basic period</span>
+                </div>
+                <input type="number" min="1" id="basicPeriod" class="form-control" required="required" />
+                <div class="input-group-append">
+                    <span class="input-group-text">hours</span>
+                </div>
+                <div class="invalid-feedback">Invalid data</div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Extended time fee</span>
+                </div>
+                <input type="number" step="0.01" min="0" id="extendedFee" class="form-control" required="required" />
+                <div class="input-group-append">
+                    <span class="input-group-text">&#8377; per hour</span>
+                </div>
+                <div class="invalid-feedback">Invalid data</div>
+            </div>
+            <button class="btn btn-dark btn-block " type="submit" id="submit">Submit changes</button>
+             <a href="/logout" class="btn btn-info btn-block">
+                    <span class="glyphicon glyphicon-log-out"></span> Log out
+             </a>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

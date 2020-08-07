@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Floss</title>
+    <meta name="description" content="Parking allotment">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .btn:hover {
+            opacity: 0.7;
+        }
+        
+        .header {
+            background-color: black;
+            height: 5px;
+        }
+        
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .img-container {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var x = document.forms["reg"]["password"].value;
+            if (x.length < 6) {
+                alert("Password must be more than 5 characters");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="header"></div>
+    <br><br>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="container">
+                <div class="img-container">
+                    <img th:src="@{/images/floss.jpeg}" width="500px">
+                </div>
+                <h1 class="text-center">Register now!</h1>
+               <div class="container">
+     <form class="form" method="POST" th:action="@{/signup}">
+                    <div class="form-group">
+                        <label for="email"> Username:</label>
+                        <input id="email" class="form-control" type="text" name="username" placeholder="Enter the Email or Phone" required>
+                        <label for="password"> Password (6 or more characters):</label>
+                        <input id="password" class="form-control" type="password" name="password" placeholder="Enter the Password" required>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        <br>
+                        <p class="text-center">Already on floss? <a href="/">Sign in</a></p>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</body>
+
+</html>

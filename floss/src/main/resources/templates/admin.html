@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Floss</title>
+    <meta name="description" content="Parking allotment">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .btn:hover {
+            opacity: 0.7;
+        }
+        
+        .header {
+            background-color: black;
+            height: 5px;
+        }
+        
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .img-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <br><br>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="container">
+                <div class="img-container">
+                    <img  th:src="@{/images/floss.jpeg}" width="500px">
+                </div>
+                <h1 class="text-center">Welcome Back Admin!</h1>
+                <form action="/alogin" method="POST">
+                    <div class="form-group">
+                        <label for="username"> Username:</label>
+                        <input id="username" class="form-control" type="text" name="username" placeholder="Enter the Email or Phone" required>
+                        <label for="password"> Password:</label>
+                        <input id="password" class="form-control" type="password" name="password" placeholder="Enter the Password" required>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        <br>
+                        <p class="text-center">New to Floss? <a href="/signup">Join now</a></p>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-3"></div>
+    </div>
+</body>
+
+</html>>

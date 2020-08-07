@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        hr.solid {
+            border-top: 3px solid #bbb;
+            width: 900px;
+        }
+        
+        hr.line {
+            border-top: 1px solid #bbb;
+            width: 315px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-conatiner" style="text-align:center">
+        <img th:src="@{/images/floss.jpeg}" width="400px">
+    </div>
+    <h3 style="text-align: center;">Floss service is available in many cities across the India.</h3>
+    <hr class="solid">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="image-conatiner" style="text-align:center">
+                <img th:src="@{/images/india.jpg}" width="300px">
+                <p class="lead" style="font-size: 50px;">Park now @</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6" style="font-size: 20px;">
+                    <ul>
+                        <li>
+                            <a href="/index">Chennai</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Mumbai</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Kolkata</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Pune</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Banglore</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Coimbatore</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Madurai</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Trichy</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Viskhapatnam</a>
+                        </li>
+                        <hr class="line">
+                    </ul>
+                </div>
+                <div class="col-sm-6" style="font-size: 20px;">
+                    <ul>
+                        <li>
+                            <a href="#">Thrissur</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Agra</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Delhi</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Mysore</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Allahabad</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Noida</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Virudhunagar</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">Trinelveli</a>
+                        </li>
+                        <hr class="line">
+                        <li>
+                            <a href="#">KanyaKumari</a>
+                        </li>
+                        <hr class="line">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+</body>
+
+</html>
